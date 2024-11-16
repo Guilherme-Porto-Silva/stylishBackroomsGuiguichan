@@ -1,0 +1,87 @@
+*{
+    font-size: medium;
+    list-style: none;
+    text-decoration: none;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+body{
+    background-image: url("./src/stylefullHousePhotograph.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+section, img{
+    background-color: gray;
+    outline-width: 1%;
+    outline-color: gold;
+    outline-style: groove;
+}
+section, header{
+width: 80%;
+margin: 5% 10%;
+padding: 5px;
+}
+header{
+    *{font-size: larger;}
+    div{
+        outline-width: 1%;
+        outline-color: gold;
+        outline-style: groove;
+        h1{
+            box-sizing: border-box;
+            flex-wrap: nowrap;
+            color: gold;
+        }
+    }
+    ul::after{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: start;
+        content: url("./src/jewleryDecoy.png");
+    }
+    ul::before{
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        content: url("./src/pendant.png");
+    }
+}
+main h1{justify-self: center;}
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 5px;
+}
+.son{
+    width: 40%;
+    margin: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h5{
+        width: 51%;
+        margin-top: 5px;
+    }
+    img{width: 40%;}
+}
+a:hover{color: gold;}
+@media screen and (max-width: 850px) {
+    ul{display: none;}
+    img, section, h5{width: 100%;}
+    section{margin: 0;}
+    .son{
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+        margin-top: 15px;
+    }
+    .row{
+        flex-direction: column;
+        justify-content: space-around;
+        p{width: 150%;}
+    }
+}
